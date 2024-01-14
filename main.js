@@ -4,7 +4,7 @@ const menuCarritoIcom = document.querySelector(".navbar-shoping-card")
 
 const desktopMenu = document.querySelector(".desktop-menu")
 const mobileMenu = document.querySelector(".mobile-menu")
-const aside = document.querySelector(".product-detail")
+const shoppingCartContainer = document.getElementById("shoppingCartContainer")
 const cardsContiner = document.querySelector(".cards-container")
 
 menuEmail.addEventListener("click", toggleDesktoptMenu)
@@ -15,16 +15,16 @@ menuCarritoIcom.addEventListener("click", toggleCarritoAside)
 function toggleDesktoptMenu () {
     /*.classList.toggle 
     La función classList.toggle es un método en JavaScript que se utiliza en el contexto del manejo de clases de elementos HTML. Esta función se utiliza para alternar la presencia de una clase en un elemento. Si la clase ya está presente, se quita; si no está presente, se agrega.  */
-    const isAsideMenuClosed = aside.classList.contains("inactive")
+    const isAsideMenuClosed = shoppingCartContainer.classList.contains("inactive")
     if (!isAsideMenuClosed) {
-        aside.classList.add("inactive")
+        shoppingCartContainer.classList.add("inactive")
     }   
     desktopMenu.classList.toggle("inactive")
 }
 function toggleMobileMenu () {
-    const isAsideMenuClosed = aside.classList.contains("inactive")
+    const isAsideMenuClosed = shoppingCartContainer.classList.contains("inactive")
     if (!isAsideMenuClosed) {
-        aside.classList.add("inactive")
+        shoppingCartContainer.classList.add("inactive")
     }
     mobileMenu.classList.toggle("inactive")
 }
@@ -36,7 +36,7 @@ function toggleCarritoAside () {
     }else if (!isDesktopMenuClosed) {
         desktopMenu.classList.add("inactive")
     }
-    aside.classList.toggle('inactive')
+    shoppingCartContainer.classList.toggle('inactive')
 }
 
 const productList = []
