@@ -366,10 +366,12 @@ aside {
         display: none;
     }
 
-    .product-detail {
+    #product-detail {
         width: 100%;
     }
-
+    #shoppingCartContainer {
+        width: 100%;
+    }
     .cards-container{
         display: grid;
         /* repeat(auto-fill , 240px)  ya llenando la pantalla con partes de un determinado ancho*/
